@@ -78,7 +78,7 @@ Dependencies в Maven спасают нас от ситуаций:
 Если зависимости нет в Maven local .m2 папке, тогда maven выгружает зависимость из
 Maven Central. С этой зависимостью у нас подгружаются все необходимые jar файлы
 
-![img.png](C:\Users\Nikita\IdeaProjects\Java-Developer-Interview\images\img.png)
+![img.png](\images\img.png)
 
 #### Транзитивные зависимости
 
@@ -138,7 +138,7 @@ Maven Central. С этой зависимостью у нас подгружаю
 Для наглядности будем использовать inteliij maven dependency diagram вместо mvn dependency:tree
 Вот наши транзитивные зависимости:
 
-![img_1.png](C:\Users\Nikita\IdeaProjects\Java-Developer-Interview\images\img_1.png)
+![img_1.png](\images\img_1.png)
 
 Далее попробуем передавить транзитивую зависимость spring-aop,для этого явно укажем ее
 в root pom.xml файле.В итоге блок с зависимостями выглядит так:
@@ -160,7 +160,7 @@ Maven Central. С этой зависимостью у нас подгружаю
 
 Теперь взглянем на maven dependency diagram:
 
-![img_2.png](C:\Users\Nikita\IdeaProjects\Java-Developer-Interview\images\img_2.png)
+![img_2.png](\images\img_2.png)
 Как мы видим произошел конфликт зависимостей.В результате зависимости которые
 "подтянулись" будут spring-aop(5.3.15) и spring-beans(5.3.15) т.к путь от них,до
 нашего root проекта короче чем от таких же зависимостей, но версии(6.0.6).
